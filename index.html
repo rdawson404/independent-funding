@@ -912,20 +912,67 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
   </section>
 
   <section class="contact-section">
-    <div style="max-width:680px;margin:0 auto">
-      <iframe
-        id="JotFormIFrame-253506181714050"
-        title="Independent Funding Application"
-        onload="window.parent.scrollTo(0,0)"
-        allowtransparency="true"
-        allow="geolocation; microphone; camera; fullscreen; payment"
-        src="https://form.jotform.com/253506181714050"
-        frameborder="0"
-        style="min-width:100%;max-width:100%;height:539px;border:none;"
-        scrolling="no"
-      ></iframe>
-      <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
-      <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-253506181714050']", "https://form.jotform.com/")</script>
+    <div class="inquiry-form-wrap">
+      <form id="apply-form" action="https://formspree.io/f/PLACEHOLDER" method="POST" enctype="multipart/form-data">
+
+        <div class="upload-box" onclick="document.getElementById('apply-upload').click()">
+          <div class="upload-icon">📄</div>
+          <div class="upload-title" id="apply-upload-title">Upload Bank Statements</div>
+          <div class="upload-sub">Click to browse — PDF, JPG, or PNG (25 MB max)</div>
+        </div>
+        <input type="file" id="apply-upload" name="bank_statements" accept=".pdf,.jpg,.jpeg,.png" style="display:none" multiple>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="apply-name">Full Name</label>
+            <input class="form-input" type="text" id="apply-name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="apply-business">Business Name</label>
+            <input class="form-input" type="text" id="apply-business" name="business_name" placeholder="Your business name" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="apply-email">Email</label>
+            <input class="form-input" type="email" id="apply-email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="apply-phone">Phone</label>
+            <input class="form-input" type="tel" id="apply-phone" name="phone" placeholder="(555) 123-4567" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="apply-situation">What best describes your situation?</label>
+          <select class="form-select" id="apply-situation" name="situation">
+            <option value="" disabled selected>Select one…</option>
+            <option value="Need working capital — first time">Need working capital — first time</option>
+            <option value="Have active MCAs — looking to restructure">Have active MCAs — looking to restructure</option>
+            <option value="Received an offer — want a second opinion">Received an offer — want a second opinion</option>
+            <option value="Building toward long-term financing">Building toward long-term financing</option>
+            <option value="Other / Not sure">Other / Not sure</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="apply-notes">Anything else we should know?</label>
+          <textarea class="form-textarea" id="apply-notes" name="notes" placeholder="Additional details, questions, or context…" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Submit Application</button>
+        <div class="secure-note"><span>🔒</span> Your information is secure and will never be shared with third parties.</div>
+        <div class="privacy-box">By submitting, you agree to receive SMS and email communications from Independent Funding. Message &amp; data rates may apply. You can opt out at any time.</div>
+      </form>
+      <div id="apply-success" class="form-success" style="display:none">
+        <div class="form-success-icon">✓</div>
+        <h3 style="font-family:'DM Serif Display',serif;font-size:1.4rem;margin-bottom:.5rem;color:var(--charcoal)">Application received!</h3>
+        <p style="color:var(--gray);font-size:.92rem">Thank you for applying. Our team will review your information and reach out within one business day.</p>
+      </div>
+      <div id="apply-error" style="display:none;text-align:center;padding:1rem;margin-top:1rem;background:#FEF2F2;border:1px solid #FECACA;border-radius:6px;color:#991B1B;font-size:.88rem">
+        Something went wrong. Please try again or email us directly at <a href="mailto:info@independentfunding.net" style="color:#991B1B;text-decoration:underline">info@independentfunding.net</a>.
+      </div>
     </div>
   </section>
 </div>
@@ -1239,6 +1286,44 @@ window.addEventListener('scroll', () => {
   const scrolled = window.scrollY > 60;
   nav.style.padding = scrolled ? '.8rem 5%' : '1.2rem 5%';
   nav.classList.toggle('scrolled', scrolled);
+});
+
+// ── APPLY FORM — file upload ──
+document.getElementById('apply-upload').addEventListener('change', function() {
+  var title = document.getElementById('apply-upload-title');
+  if (this.files.length === 1) {
+    title.textContent = this.files[0].name;
+  } else if (this.files.length > 1) {
+    title.textContent = this.files.length + ' files selected';
+  } else {
+    title.textContent = 'Upload Bank Statements';
+  }
+});
+
+// ── APPLY FORM — submit ──
+document.getElementById('apply-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = this;
+  var btn = form.querySelector('.form-submit');
+  btn.disabled = true;
+  btn.textContent = 'Submitting…';
+  document.getElementById('apply-error').style.display = 'none';
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: {'Accept': 'application/json'}
+  }).then(function(r) {
+    if (r.ok) {
+      form.style.display = 'none';
+      document.getElementById('apply-success').style.display = 'block';
+    } else {
+      throw new Error('submit failed');
+    }
+  }).catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'Submit Application';
+    document.getElementById('apply-error').style.display = 'block';
+  });
 });
 
 // ── INQUIRY FORM ──
