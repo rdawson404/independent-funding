@@ -377,6 +377,11 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
 .footer-bottom{max-width:1140px;margin:2rem auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-copy{font-size:.75rem;color:var(--gray);opacity:.7}
 .footer-disc{font-size:.72rem;color:var(--gray);opacity:.6;max-width:600px;line-height:1.6}
+.disclosure-section{max-width:1140px;margin:0 auto;padding:2rem 1.5rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:12px}
+.disclosure-section h4{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--white);margin-bottom:1rem;letter-spacing:1px}
+.disclosure-section p,.disclosure-section ul{font-size:.78rem;color:var(--gray);line-height:1.7;margin-bottom:.8rem}
+.disclosure-section ul{list-style:disc;padding-left:1.4rem}
+.disclosure-section ul li{margin-bottom:.4rem}
 
 /* ANIMATIONS */
 @keyframes slideIn{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:none}}
@@ -1138,9 +1143,23 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
+      <span style="font-size:.82rem;color:var(--gray);line-height:1.5;display:block;margin-bottom:.6rem">1710 Coney Island Ave<br>Brooklyn, NY 11230</span>
       <a href="mailto:info@independentfunding.net">info@independentfunding.net</a>
       <a href="#contact" onclick="showPage('contact'); return false;">Apply Now</a>
     </div>
+  </div>
+  <div class="disclosure-section" style="margin-top:2rem;margin-bottom:1.5rem">
+    <h4>IMPORTANT DISCLOSURES</h4>
+    <p>Independent Funding LLC provides merchant cash advances (MCAs) and revenue-based financing — these are commercial transactions, not loans. As such, they do not carry an Annual Percentage Rate (APR) and are not subject to state lending license requirements.</p>
+    <p><strong style="color:var(--white)">Pricing &amp; Cost Structure:</strong></p>
+    <ul>
+      <li>Factor rates typically range from 1.17 to 1.49 depending on qualification tier and risk profile</li>
+      <li>Example: A $10,000 advance at a 1.30 factor rate = $13,000 total payback ($3,000 in total fees)</li>
+      <li>Terms range from 3 to 36 months depending on program</li>
+      <li>SBA and conventional loan programs (offered through bank partners) range from 5 to 25 years with conventional interest rates of 8–14%</li>
+      <li>No application fees, no hidden charges — full cost breakdown provided before signing</li>
+    </ul>
+    <p>All transactions are subject to underwriting review and approval. Not all applicants will qualify.</p>
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">&copy; 2026 Independent Funding. All rights reserved. &nbsp;|&nbsp; <a href="#privacy" onclick="showPage('privacy'); return false;" style="color:var(--gray);text-decoration:underline">Privacy Policy</a> &nbsp;|&nbsp; <a href="#terms" onclick="showPage('terms'); return false;" style="color:var(--gray);text-decoration:underline">Terms &amp; Conditions</a></div>
