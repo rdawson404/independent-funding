@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Independent Funding — Business Capital Solutions</title>
+<meta name="description" content="Independent Funding provides merchant cash advances, revenue-based financing, and business capital solutions in Brooklyn, NY. Transparent terms, no hidden fees. Call (888) 842-8231.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231A1F2E'/><text x='16' y='22' font-family='serif' font-size='18' font-weight='700' fill='%2310B981' text-anchor='middle'>IF</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
@@ -447,6 +448,27 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
 
 /* ── DIAMOND DECORATIONS ── */
 .diamond-deco{position:absolute;width:60px;height:60px;background:rgba(16,185,129,0.05);transform:rotate(45deg);pointer-events:none}
+
+/* ── RATES & DISCLOSURES ── */
+.rates-disclosures{background:var(--cream);padding:5rem 5%;position:relative;overflow:hidden}
+.rates-disclosures::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 50px,rgba(26,31,46,0.02) 50px,rgba(26,31,46,0.02) 52px);pointer-events:none}
+.rates-inner{max-width:1140px;margin:0 auto}
+.rates-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem}
+.rates-card{background:var(--white);border:1px solid var(--lgray);border-left:3px solid var(--emerald);border-radius:8px;padding:2.5rem;box-shadow:var(--shadow-sm)}
+.rates-card h3{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--charcoal);margin-bottom:1.2rem}
+.rates-card ul{list-style:none;padding:0;margin:0 0 1.2rem}
+.rates-card ul li{font-size:.88rem;line-height:1.8;color:var(--gray);padding-left:1.2rem;position:relative}
+.rates-card ul li::before{content:'•';position:absolute;left:0;color:var(--emerald);font-weight:700}
+.rates-card .rates-notice{font-size:.85rem;line-height:1.7;color:var(--charcoal);background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.15);border-radius:6px;padding:.8rem 1rem;margin-top:.5rem;font-weight:500}
+@media(max-width:900px){.rates-grid{grid-template-columns:1fr}}
+
+/* ── BUSINESS IDENTITY ── */
+.business-identity{background:var(--white);border:1px solid var(--lgray);border-left:3px solid var(--emerald);border-radius:8px;padding:2rem 2.5rem;max-width:720px;margin:0 auto 2rem;box-shadow:var(--shadow-sm)}
+.business-identity h3{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--charcoal);margin-bottom:1rem}
+.business-identity-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 2rem}
+.business-identity-item{display:flex;align-items:flex-start;gap:.6rem;font-size:.88rem;color:var(--gray);line-height:1.6}
+.business-identity-item strong{color:var(--charcoal);white-space:nowrap}
+@media(max-width:900px){.business-identity-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -661,7 +683,7 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
       <div class="prog-icon">📈</div>
       <div class="prog-title">SBA & Long-Term Options</div>
       <div class="prog-tag">Bankable · 5–25 Years</div>
-      <div class="prog-desc">Conventional-rate, long-term financing through SBA programs or bank partners. The gold standard — the lower-cost capital every growing business should aim for. <em style="color:var(--emerald);font-size:.82rem">(Referral product — placed through lending partners)</em></div>
+      <div class="prog-desc">Conventional-rate, long-term financing through SBA programs or bank partners. The gold standard — the lower-cost capital every growing business should aim for. <strong style="color:var(--charcoal);font-size:.82rem;display:block;margin-top:.6rem">Independent Funding is not a direct lender. SBA and conventional loan products are placed through third-party lending partners who originate and fund the loans.</strong></div>
       <div class="prog-works">Best For</div>
       <ul class="prog-list">
         <li>680+ FICO with clean history</li>
@@ -917,6 +939,15 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
   </section>
 
   <section class="contact-section">
+    <div class="business-identity">
+      <h3>Independent Funding</h3>
+      <div class="business-identity-grid">
+        <div class="business-identity-item"><strong>Address:</strong> 1710 Coney Island Ave, Brooklyn, NY 11230</div>
+        <div class="business-identity-item"><strong>Phone:</strong> <a href="tel:+18888428231" style="color:var(--emerald)">(888) 842-8231</a></div>
+        <div class="business-identity-item"><strong>Email:</strong> <a href="mailto:info@independentfunding.net" style="color:var(--emerald)">info@independentfunding.net</a></div>
+        <div class="business-identity-item"><strong>Hours:</strong> Monday–Friday, 9 AM – 6 PM EST</div>
+      </div>
+    </div>
     <div class="inquiry-form-wrap">
       <form id="apply-form" action="https://formspree.io/f/xreyjjdv" method="POST" enctype="multipart/form-data">
 
@@ -1033,7 +1064,7 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
       <p>We may update this Privacy Policy from time to time. The revised policy will be posted on this page with the "Last Updated" date. We recommend checking this page periodically for any changes. Your continued use of the Site or services after any modifications will signify your acceptance of the updated Privacy Policy.</p>
 
       <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:ronald@independentfunding.net" style="color:var(--emerald)">ronald@independentfunding.net</a></p>
+      <p>Email: <a href="mailto:info@independentfunding.net" style="color:var(--emerald)">info@independentfunding.net</a></p>
     </div>
   </section>
 </div>
@@ -1084,7 +1115,7 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
       <p>We reserve the right to update or modify these Terms and Conditions at any time without prior notice. Your continued use of our website following the posting of any changes constitutes your acceptance of such changes.</p>
 
       <h3>11. Contact Us</h3>
-      <p>If you have any questions or concerns about these Terms and Conditions, please contact us at <a href="mailto:ronald@independentfunding.net" style="color:var(--emerald)">ronald@independentfunding.net</a>.</p>
+      <p>If you have any questions or concerns about these Terms and Conditions, please contact us at <a href="mailto:info@independentfunding.net" style="color:var(--emerald)">info@independentfunding.net</a>.</p>
 
       <h4>SMS Terms and Conditions</h4>
 
@@ -1116,6 +1147,38 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
     </div>
   </section>
 </div>
+
+<!-- ════════════════════════════════ RATES & DISCLOSURES ════════════════════════════════ -->
+<section class="rates-disclosures" id="rates-disclosures">
+  <div class="rates-inner">
+    <p class="label">Transparency</p>
+    <h2 class="h2">Rates &amp; Disclosures</h2>
+    <p class="body-text">We believe you should know exactly what you're paying before you sign anything. Here's a clear breakdown of our products and pricing.</p>
+    <div class="rates-grid">
+      <div class="rates-card">
+        <h3>Commercial MCA / Revenue-Based Financing</h3>
+        <ul>
+          <li>Factor rate range: 1.17 – 1.49</li>
+          <li>Example: $10,000 advance at a 1.30 factor rate = $13,000 total payback ($3,000 in total fees)</li>
+          <li>Term range: 3 – 36 months depending on program</li>
+          <li>No application fees or hidden charges</li>
+          <li>Full cost breakdown provided before signing</li>
+        </ul>
+        <div class="rates-notice">Merchant cash advances and revenue-based financing are commercial transactions, not loans. APR does not apply.</div>
+      </div>
+      <div class="rates-card">
+        <h3>Partner Loan Products (SBA / Conventional)</h3>
+        <ul>
+          <li>SBA loans and conventional business loans available through lending partners</li>
+          <li>Interest rate range: 8 – 14%</li>
+          <li>Term range: 5 – 25 years</li>
+          <li>Qualification based on credit, revenue, and business history</li>
+        </ul>
+        <div class="rates-notice">Independent Funding acts as a referral partner for SBA and conventional loan products. These products are originated and funded by third-party lending partners. Independent Funding is not a direct lender.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ════════════════════════════════ FOOTER ════════════════════════════════ -->
 <footer id="site-footer">
@@ -1150,16 +1213,8 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
   </div>
   <div class="disclosure-section" style="margin-top:2rem;margin-bottom:1.5rem">
     <h4>IMPORTANT DISCLOSURES</h4>
-    <p>Independent Funding LLC provides merchant cash advances (MCAs) and revenue-based financing — these are commercial transactions, not loans. As such, they do not carry an Annual Percentage Rate (APR) and are not subject to state lending license requirements.</p>
-    <p><strong style="color:var(--charcoal)">Pricing &amp; Cost Structure:</strong></p>
-    <ul>
-      <li>Factor rates typically range from 1.17 to 1.49 depending on qualification tier and risk profile</li>
-      <li>Example: A $10,000 advance at a 1.30 factor rate = $13,000 total payback ($3,000 in total fees)</li>
-      <li>Terms range from 3 to 36 months depending on program</li>
-      <li>SBA and conventional loan programs (offered through bank partners) range from 5 to 25 years with conventional interest rates of 8–14%</li>
-      <li>No application fees, no hidden charges — full cost breakdown provided before signing</li>
-    </ul>
-    <p>All transactions are subject to underwriting review and approval. Not all applicants will qualify.</p>
+    <p>Independent Funding LLC provides merchant cash advances and revenue-based financing (commercial transactions, not loans — APR does not apply) as well as referral access to SBA and conventional loan products through third-party lending partners. All transactions are subject to underwriting review and approval. Not all applicants will qualify.</p>
+    <p style="margin-bottom:0">For full pricing details, rate ranges, and product disclosures, see our <a href="#rates-disclosures" style="color:var(--emerald);text-decoration:underline;font-weight:500">Rates &amp; Disclosures</a> section above.</p>
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">&copy; 2026 Independent Funding. All rights reserved. &nbsp;|&nbsp; <a href="#privacy" onclick="showPage('privacy'); return false;" style="color:var(--gray);text-decoration:underline">Privacy Policy</a> &nbsp;|&nbsp; <a href="#terms" onclick="showPage('terms'); return false;" style="color:var(--gray);text-decoration:underline">Terms &amp; Conditions</a></div>
