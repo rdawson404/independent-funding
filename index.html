@@ -56,6 +56,8 @@ nav.scrolled{background:rgba(26,31,46,0.92)}
 .nav-links a:not(.nav-cta)::after{content:'';position:absolute;bottom:0;left:1rem;width:0;height:2px;background:var(--emerald);transition:width .3s ease}
 .nav-links a:not(.nav-cta):hover::after,.nav-links a:not(.nav-cta).active::after{width:calc(100% - 2rem)}
 .nav-links a:hover,.nav-links a.active{color:var(--emerald)}
+.nav-phone{font-size:.82rem!important;color:rgba(255,255,255,.7)!important;text-transform:none!important;letter-spacing:0!important;font-weight:400!important}
+.nav-phone:hover{color:var(--emerald)!important}
 .nav-cta{
   background:linear-gradient(135deg,var(--gold-accent),#E8C06A)!important;color:var(--charcoal)!important;
   padding:.55rem 1.3rem!important;margin-left:.5rem;
@@ -437,6 +439,7 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
   .nav-links{display:none;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:var(--charcoal);padding:1.5rem;gap:.5rem;z-index:199}
   .nav-links.open{display:flex}
   .nav-links a{border-bottom:1px solid var(--borderdark);padding:.8rem 0}
+  .nav-phone{display:none!important}
   .hamburger{display:flex}
   .stats-bar{grid-template-columns:repeat(2,1fr)}
   .problem-grid,.phases-grid,.approach-grid,.programs-grid,.tiers-grid,.tiers-grid-3,.faq-grid,.philosophy-inner,.footer-top,.form-row{grid-template-columns:1fr}
@@ -489,6 +492,7 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
     <a href="#tiers" onclick="showPage('tiers'); return false;">Qualifications</a>
     <a href="#faq" onclick="showPage('faq'); return false;">FAQ</a>
     <a href="#contact" onclick="showPage('contact'); return false;">Contact</a>
+    <a href="tel:8888428231" class="nav-phone">(888) 842-8231</a>
     <a href="#contact" onclick="showPage('contact'); return false;" class="nav-cta">Apply Now</a>
   </div>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -1064,7 +1068,10 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
       <p>We may update this Privacy Policy from time to time. The revised policy will be posted on this page with the "Last Updated" date. We recommend checking this page periodically for any changes. Your continued use of the Site or services after any modifications will signify your acceptance of the updated Privacy Policy.</p>
 
       <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:info@independentfunding.net" style="color:var(--emerald)">info@independentfunding.net</a></p>
+      <p><strong>Independent Funding LLC</strong><br>
+      1710 Coney Island Ave, Brooklyn, NY 11230<br>
+      Phone: <a href="tel:8888428231" style="color:var(--emerald)">(888) 842-8231</a><br>
+      Email: <a href="mailto:info@independentfunding.net" style="color:var(--emerald)">info@independentfunding.net</a></p>
     </div>
   </section>
 </div>
@@ -1143,7 +1150,7 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
         <li>Message frequency may vary.</li>
       </ul>
 
-      <p style="margin-top:2rem;font-size:.82rem;color:var(--gray);opacity:.7">Last Updated: 08/15/2023</p>
+      <p style="margin-top:2rem;font-size:.82rem;color:var(--gray);opacity:.7">Last Updated: 03/20/2026</p>
     </div>
   </section>
 </div>
@@ -1215,6 +1222,7 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
   <div class="disclosure-section" style="margin-top:2rem;margin-bottom:1.5rem">
     <h4>IMPORTANT DISCLOSURES</h4>
     <p>Independent Funding LLC provides merchant cash advances and revenue-based financing (commercial transactions, not loans — APR does not apply) as well as referral access to SBA and conventional loan products through third-party lending partners. All transactions are subject to underwriting review and approval. Not all applicants will qualify.</p>
+    <p>Independent Funding LLC is a direct lender for merchant cash advances and revenue-based financing products.</p>
     <p style="margin-bottom:0">For full pricing details, rate ranges, and product disclosures, see our <a href="#rates-disclosures" style="color:var(--emerald);text-decoration:underline;font-weight:500">Rates &amp; Disclosures</a> section above.</p>
   </div>
   <div class="footer-bottom">
