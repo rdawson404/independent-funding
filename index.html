@@ -1137,6 +1137,7 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
 </div>
 
 <!-- ════════════════════════════════ RATES & DISCLOSURES ════════════════════════════════ -->
+<div class="page" id="page-rates-disclosures">
 <section class="rates-disclosures" id="rates-disclosures">
   <div class="rates-inner">
     <p class="label">Transparency</p>
@@ -1157,6 +1158,7 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
     </div>
   </div>
 </section>
+</div>
 
 <!-- ════════════════════════════════ FOOTER ════════════════════════════════ -->
 <footer id="site-footer">
@@ -1193,7 +1195,7 @@ footer::before{content:'';position:absolute;top:-100px;left:5%;width:300px;heigh
     <h4>IMPORTANT DISCLOSURES</h4>
     <p>Independent Funding LLC provides merchant cash advances and revenue-based financing (commercial transactions, not loans — APR does not apply). All transactions are subject to underwriting review and approval. Not all applicants will qualify.</p>
     <p>Independent Funding LLC is a direct lender for merchant cash advances and revenue-based financing products.</p>
-    <p style="margin-bottom:0">For full pricing details, rate ranges, and product disclosures, see our <a href="#rates-disclosures" style="color:var(--emerald);text-decoration:underline;font-weight:500">Rates &amp; Disclosures</a> section above.</p>
+    <p style="margin-bottom:0">For full pricing details, rate ranges, and product disclosures, see our <a href="#rates-disclosures" onclick="showPage('rates-disclosures'); return false;" style="color:var(--emerald);text-decoration:underline;font-weight:500">Rates &amp; Disclosures</a> section above.</p>
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">&copy; 2026 Independent Funding. All rights reserved. &nbsp;|&nbsp; <a href="#privacy" onclick="showPage('privacy'); return false;" style="color:var(--gray);text-decoration:underline">Privacy Policy</a> &nbsp;|&nbsp; <a href="#terms" onclick="showPage('terms'); return false;" style="color:var(--gray);text-decoration:underline">Terms &amp; Conditions</a></div>
@@ -1210,7 +1212,7 @@ function showPage(id, pushState) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-  const pageMap = {home:0, approach:1, programs:2, tiers:3, faq:4, contact:5, privacy:null, terms:null};
+  const pageMap = {home:0, approach:1, programs:2, tiers:3, faq:4, contact:5, privacy:null, terms:null, 'rates-disclosures':null};
   const idx = pageMap[id];
   if (idx !== undefined) {
     const links = document.querySelectorAll('.nav-links a');
